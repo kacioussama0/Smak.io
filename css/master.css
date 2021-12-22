@@ -1,0 +1,1193 @@
+/* Start Global Rules  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #11343a; */
+}
+
+:root {
+    --main-color: #e5cf00;
+    --second-color: #0f2f34;
+}
+
+div.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media(min-width: 768px) {
+    div.container {
+        width: 720px;
+    }
+}
+
+@media(min-width: 992px) {
+    div.container {
+        width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    div.container {
+        width: 1140px;
+    }
+}
+
+
+/* End Global Rules */
+
+
+/* Start Header */
+
+header {
+    background-color: #122a2f;
+    padding: 15px 0;
+    height: 76px;
+}
+
+header div.container {}
+
+header div.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.container nav img.main-logo {
+    width: 70px;
+}
+
+header div.container nav div.links {
+    position: relative;
+}
+
+header div.container nav div.links span.menu {
+    display: none;
+    cursor: pointer;
+}
+
+header div.container nav div.links ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.container nav div.links ul li {
+    margin: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.6s;
+    position: relative;
+}
+
+header div.container nav div.links ul li:not(li:last-child)::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -2.5px;
+}
+
+header div.container nav div.links ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.6s;
+}
+
+header div.container nav div.links ul li:hover a {
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    header div.container nav div.links span.menu {
+        display: block;
+        font-size: 40px;
+        color: var(--main-color);
+    }
+    header div.container nav div.links ul {
+        padding: 20px;
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        background-color: #0f2f34;
+        left: 50%;
+        margin-left: -130px;
+        align-items: flex-start;
+        justify-content: center;
+        top: 70px;
+    }
+    header div.container nav div.links:hover ul {
+        display: flex;
+    }
+    header div.container nav div.links ul li {
+        margin-bottom: 15px;
+    }
+    header div.container nav div.links ul li:hover {
+        padding-left: 5px;
+    }
+    header div.container nav div.links ul li::after {
+        display: none;
+    }
+}
+
+
+/* End Header */
+
+
+/* Start Landing Page */
+
+div.landing-page {
+    height: 600px;
+    background-color: #11343a;
+    background-image: url('../imgs/Landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+div.landing-page div.big-text {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(18, 42, 47, 0.4);
+    color: #fff;
+    padding: 20px 0;
+}
+
+div.landing-page div.big-text h1 {
+    text-align: center;
+    font-size: 40px;
+    max-width: 500px;
+    line-height: 1.4;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.landing-page div.big-text button {
+    display: block;
+    padding: 10px 30px;
+    border: none;
+    background-color: var(--main-color);
+    margin: 15px auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+div.landing-page div.big-text button:hover {
+    background-color: #c5b30d;
+}
+
+span.slide-down {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+span.slide-down a {
+    color: #fff;
+}
+
+
+/* End Landing Page */
+
+
+/* Start Services  */
+
+div.services {
+    padding: 30px 0;
+}
+
+div.services h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+div.services h2 {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.services h2::before {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+div.services p {
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.services div.service {
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+div.services div.service div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.services div.service div div.icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--second-color);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+div.services div.service div div.icon:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+div.services div.service div div.icon i {
+    color: var(--main-color);
+    font-size: 40px;
+    transition: 0.6s;
+}
+
+div.services div.service div div.icon:hover i {
+    color: #fff;
+}
+
+div.services div.service div p {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+
+/* End Services  */
+
+
+/* Start How We do it */
+
+div.how-we-do-it {
+    padding: 30px;
+    background-color: #131a1d;
+    color: #fff;
+}
+
+div.how-we-do-it div.container {}
+
+div.how-we-do-it div.container h2 {
+    text-align: center;
+    color: var(--main-color);
+}
+
+div.how-we-do-it div.container p {
+    text-align: center;
+}
+
+div.how-we-do-it div.container div.work {
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 25px;
+}
+
+div.how-we-do-it div.container div.work div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.how-we-do-it div.container div.work div i {
+    font-size: 40px;
+    margin: 15Px 0;
+    color: var(--main-color);
+}
+
+div.how-we-do-it div.container div.work div h5 {
+    font-size: 20px;
+    margin: 15px auto;
+}
+
+div.how-we-do-it div.container div.work div p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+/* End How We do it */
+
+
+/* Start Works */
+
+div.works {
+    padding: 30px 0;
+}
+
+div.works h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+div.works h2 {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.works h2::before {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+div.works p {
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.works div.slider {
+    margin: 100px auto 50px;
+}
+
+div.works div.filter {}
+
+div.works div.filter ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.works div.filter ul li {
+    margin: 0 30px;
+    cursor: pointer;
+    transition: 0.6s;
+    position: relative;
+}
+
+div.works div.filter ul li:hover {
+    color: var(--main-color);
+}
+
+div.works div.filter ul li:not(li:last-child)::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5px;
+    right: -30px;
+}
+
+.active {
+    color: var(--main-color);
+}
+
+div.works div.slider div.expand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+
+div.works div.slider div.expand div.left {
+    width: 50%;
+    height: 400px;
+    background: #292f34;
+}
+
+div.works div.slider div.expand div.right {
+    width: 45%;
+}
+
+div.works div.slider div.expand div.right h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+div.works div.slider div.expand div.right p {
+    text-align: left;
+}
+
+div.works div.slider div.expand div.right button {
+    padding: 15px 40px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+div.works div.work {
+    height: 400px;
+    background: var(--second-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+div.works div.work div.image-two,
+div.works div.work div.image-four,
+div.works div.work div.image-six,
+div.works div.work div.image-seven,
+div.works div.work div.image-nine,
+div.works div.work div.image-eleven {
+    background-color: #394948;
+}
+
+@media (max-width: 767px) {
+    div.works div.filter ul {
+        flex-direction: column;
+    }
+    div.works div.filter ul li {
+        margin-bottom: 15px;
+    }
+    div.works div.filter ul li::after {
+        display: none;
+    }
+    div.works div.slider div.expand {
+        flex-direction: column;
+    }
+    div.works div.slider div.expand div.left {
+        width: 100%;
+    }
+    div.works div.slider div.expand div.right p {
+        text-align: center;
+    }
+    div.works div.slider div.expand div.right {
+        width: 100%;
+        text-align: center;
+    }
+    div.works div.work {
+        height: fit-content;
+    }
+}
+
+
+/* End Works */
+
+
+/* Start Portoflio */
+
+div.portfolio {
+    padding: 30px 0;
+    position: relative;
+}
+
+div.portfolio div.container {}
+
+div.portfolio div.container span.slide-down {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: #fff;
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+span.slide-down a {
+    color: #fff;
+}
+
+div.portfolio div.container h2 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.portfolio div.container p {
+    text-align: center;
+    font-weight: 300;
+    margin: 30px auto;
+    line-height: 1.6;
+}
+
+div.portfolio div.container button {
+    display: block;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    margin: 30px auto;
+}
+
+
+/* End Portoflio */
+
+
+/* Start Statistics */
+
+div.statistics {
+    padding: 30px 0;
+    background-color: #131a1d;
+    color: #fff;
+}
+
+div.statistics div.container h2 {
+    text-align: center;
+}
+
+div.statistics div.container p {
+    text-align: center;
+}
+
+div.statistics div.container div.stat {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin: 50px 0;
+}
+
+div.statistics div.container div.stat div {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color);
+    flex-direction: column;
+}
+
+div.statistics div.container div.stat div h5 {
+    font-size: 40px;
+    margin: 15Px 0;
+}
+
+div.statistics div.container div.stat div p {
+    color: var(--main-color);
+}
+
+
+/* End Statistics */
+
+
+/* Start About Us */
+
+div.about-us {
+    padding: 30px 0;
+}
+
+div.about-us h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+div.about-us h2 {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.about-us h2::before {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+div.about-us p {
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.about-us div.container div.support {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    grid-gap: 40px;
+}
+
+div.about-us div.container div.support div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.about-us div.container div.support div span:first-child {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #fff;
+    ;
+}
+
+div.about-us div.container div.support div span:first-child i {
+    font-size: 40px;
+}
+
+div.about-us div.container div.support div span:last-child {
+    width: 80%;
+    text-align: left;
+}
+
+div.about-us div.container div.support div span:last-child h5 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+div.about-us div.container div.support div span:last-child p {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    div.about-us div.container div.support div {
+        flex-direction: column;
+    }
+    div.about-us div.container div.support div span {
+        text-align: center !important;
+    }
+    div.about-us div.container div.support div span p {
+        text-align: center !important;
+    }
+}
+
+
+/* End About Us */
+
+
+/* Start Team */
+
+div.team {
+    padding: 30px 0;
+}
+
+div.team div.container {}
+
+div.team div.container h2 {
+    text-align: center;
+}
+
+div.team div.container>p {
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 300;
+}
+
+div.team div.container div.persons {
+    display: grid;
+    margin: 50px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+}
+
+div.team div.container div.persons>div {
+    height: 350px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+div.team div.container div.persons div div.img {
+    display: block;
+    height: 70%;
+    background-color: var(--second-color);
+}
+
+div.team div.container div.persons div span.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center text-align: center;
+}
+
+div.team div.container div.persons div span.info h5 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--main-color);
+}
+
+div.team div.container div.persons div span.info p {
+    margin: 20px 0;
+}
+
+div.testimonials {
+    padding: 30px 0;
+    background-color: #131316;
+    color: #fff;
+    position: relative;
+}
+
+div.testimonials::before {
+    content: '';
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #131316 transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: -40px;
+}
+
+div.testimonials div.container {}
+
+div.testimonials div.container h4 {
+    color: var(--main-color);
+}
+
+div.testimonials div.container p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+div.testimonials div.container span.social-media {
+    display: flex;
+    align-items: center;
+}
+
+div.testimonials div.container span.social-media span {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+div.testimonials div.container span.social-media span a {
+    color: #fff;
+}
+
+div.testimonials div.container span.social-media span:first-child:hover {
+    border-color: #4267B2;
+    background-color: #4267B2;
+}
+
+div.testimonials div.container span.social-media span:last-child:hover {
+    border-color: #1DA1F2;
+    background-color: #1DA1F2;
+}
+
+@media (max-width: 767px) {
+    div.testimonials div.container {
+        text-align: center !important;
+    }
+    div.testimonials div.container span.social-media {
+        justify-content: center;
+    }
+}
+
+
+/* End Team */
+
+
+/* Start Skills */
+
+div.skills {
+    padding: 30px 0;
+    background-color: #131a1d;
+    color: #fff;
+    text-align: center;
+}
+
+div.skills div.container p {
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+div.skills div.container div.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+div.skills div.container div.skill div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid #fff;
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 300;
+    position: relative;
+}
+
+div.skills div.container div.skill div.html-css::before {
+    content: 'HTML&CSS';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+}
+
+div.skills div.container div.skill div.ai-ps::before {
+    content: 'AI & PS';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+}
+
+div.skills div.container div.skill div.js-php::before {
+    content: 'JS & PHP';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+}
+
+div.skills div.container div.skill div.photography::before {
+    content: 'PHOTOGRAPHY';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+}
+
+@media (max-width: 767px) {
+    div.skills div.container div.skill {
+        flex-direction: column;
+    }
+    div.skills div.container div.skill div {
+        margin-bottom: 100px;
+    }
+}
+
+
+/* End Skills */
+
+
+/* Start Clients */
+
+div.clients {
+    padding: 30px 0;
+}
+
+div.clients h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+div.clients h2 {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.clients h2::before {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+div.clients p {
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.clients div.parteners {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.clients div.parteners img {
+    margin: 30px 0;
+}
+
+div.clients div.saying {
+    padding: 30px 0;
+    background-color: #131a1d;
+    color: #fff;
+}
+
+div.clients div.saying p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+div.clients div.saying span.author {
+    text-align: center;
+    display: block;
+    margin: 15px auto;
+}
+
+@media (max-width: 767px) {
+    div.clients div.parteners {
+        flex-direction: column;
+    }
+    div.clients div.saying p {
+        font-size: 20px;
+    }
+}
+
+
+/* End Clients */
+
+
+/* Start Contact Us */
+
+div.contact-us {
+    padding: 30px 0;
+}
+
+div.contact-us h4 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+div.contact-us h2 {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.contact-us h2::before {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+
+div.contact-us p {
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+div.contact-us div.infos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+    margin: 50px 0;
+}
+
+div.contact-us div.infos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.contact-us div.infos div i {
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+
+/* End Contact Us */
+
+
+/* Start Contact Form  */
+
+div.contact-form {
+    padding: 30px 0;
+    background-color: #131a1d;
+    color: #fff;
+}
+
+div.contact-form div.container h2 {
+    text-align: center;
+}
+
+div.contact-form div.container p {
+    text-align: center;
+    font-weight: 300;
+}
+
+div.contact-form div.container form div.grid {
+    margin: 50px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+div.contact-form div.container form input,
+div.contact-form div.container form textarea {
+    height: 50px;
+    background-color: transparent;
+    padding: 5px 15px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+div.contact-form div.container form input::placeholder,
+div.contact-form div.container form textarea::placeholder {
+    color: #fff;
+}
+
+div.contact-form div.container form input:focus,
+div.contact-form div.container form textarea:focus {
+    outline: none;
+}
+
+div.contact-form div.container form textarea {
+    width: 100% !important;
+    height: 200px;
+    resize: none;
+    grid-column: 1 / 4;
+    padding: 20px;
+}
+
+div.contact-form div.container form button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* End Contact Form */
+
+
+/* Start Footer */
+
+footer {
+    padding: 30px 0;
+    background-color: #131316;
+    color: #fff;
+    text-align: center;
+}
+
+footer img {
+    margin: 0 auto 20px;
+}
+
+footer span.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span.social-media span {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    transition: 0.6s;
+    margin: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer span.social-media span i {
+    font-size: 20px;
+    color: #fff;
+}
+
+footer span.social-media span a {
+    transition: 0.6s;
+}
+
+footer span.social-media span.facebook:hover {
+    background: #4267B2;
+    border-color: #4267B2;
+}
+
+footer span.social-media span.twitter:hover {
+    background: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+footer span.social-media span.youtube:hover {
+    background: #FF0000;
+    border-color: #FF0000;
+}
+
+footer span.social-media span.github:hover {
+    background: #171515;
+    border-color: #171515;
+}
+
+
+/* End Footer */
+
+
+/* Start My Framework */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-element {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* End My Framework */
